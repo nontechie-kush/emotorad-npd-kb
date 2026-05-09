@@ -8,15 +8,15 @@
 
 | File | What's Inside | Use When |
 |------|--------------|----------|
-| [00_KB_INDEX.md](00_KB_INDEX.md) | This file — navigation and quick answers | Always start here |
-| [02_Industry_History_Global.md](02_Industry_History_Global.md) | Full history of cycling industry — India, Europe, USA from origins to e-bike era | Understanding structural context, why markets are the way they are |
-| [03_India_Market.md](03_India_Market.md) | India market size, players, regulations, subsidies, FAME/PM E-Drive | Any India NPD or entry decision |
-| [04_Europe_Market.md](04_Europe_Market.md) | Europe market — broad coverage of all major countries, segments, regulatory framework | Any Europe NPD or entry decision |
-| [05_USA_Market.md](05_USA_Market.md) | USA market size, regulation (Class 1/2/3), key players, Rad Power collapse, trends | Any USA NPD or entry decision |
-| [06_Technical_Foundations.md](06_Technical_Foundations.md) | Motors (hub vs mid-drive), battery chemistry (NMC vs LFP), BMS architecture, drivetrain | Any product architecture or engineering decision |
-| [07_Consumer_Research.md](07_Consumer_Research.md) | Consumer demographics, personas, buying motivations — India, Europe, USA | Positioning, pricing, channel, product feature decisions |
-| [08_Supply_Chain.md](08_Supply_Chain.md) | China component ecosystem, Indian suppliers, cost structure, key OEM sources | Sourcing, cost modeling, MOQ planning |
-| [01_SPAIN_EUROPE_Market_Intelligence_Session1.md](01_SPAIN_EUROPE_Market_Intelligence_Session1.md) | Detailed Spain market, competitor gravel e-bike analysis (Orbea Denna, Specialized, Canyon), subsidies | Validating specific gravel bike hypothesis for Spain/Europe |
+| [KB Index](/docs/index) | This file — navigation and quick answers | Always start here |
+| [Spain & Europe Intel](/docs/01-spain-europe) | Detailed Spain market, competitor gravel e-bike analysis (Orbea Denna, Specialized, Canyon), subsidies | Validating specific gravel bike hypothesis for Spain/Europe |
+| [Industry History](/docs/02-industry-history) | Full history of cycling industry — India, Europe, USA from origins to e-bike era | Understanding structural context, why markets are the way they are |
+| [India Market](/docs/03-india-market) | India market size, players, regulations, subsidies, FAME/PM E-Drive | Any India NPD or entry decision |
+| [Europe Market](/docs/04-europe-market) | Europe market — broad coverage of all major countries, segments, regulatory framework | Any Europe NPD or entry decision |
+| [USA Market](/docs/05-usa-market) | USA market size, regulation (Class 1/2/3), key players, Rad Power collapse, trends | Any USA NPD or entry decision |
+| [Technical Foundations](/docs/06-technical) | Motors (hub vs mid-drive), battery chemistry (NMC vs LFP), BMS architecture, drivetrain | Any product architecture or engineering decision |
+| [Consumer Research](/docs/07-consumer-research) | Consumer demographics, personas, buying motivations — India, Europe, USA | Positioning, pricing, channel, product feature decisions |
+| [Supply Chain](/docs/08-supply-chain) | China component ecosystem, Indian suppliers, cost structure, key OEM sources | Sourcing, cost modeling, MOQ planning |
 
 ---
 
