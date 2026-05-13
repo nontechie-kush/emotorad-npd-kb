@@ -56,6 +56,11 @@ export default function DocPage({ doc, navItems, currentSlug }) {
                 </Link>
               </li>
             ))}
+            <li style={{ marginTop: '12px', paddingTop: '12px', borderTop: '1px solid #e5e7eb' }}>
+              <a href="/infographic.html" target="_blank" rel="noopener noreferrer" style={{ display: 'block', padding: '0.45rem 1.25rem', fontSize: '0.875rem', color: '#00a86b', textDecoration: 'none', borderLeft: '3px solid #00a86b', background: '#e8f5f0', fontWeight: 600 }}>
+                ⚡ Market Infographic →
+              </a>
+            </li>
           </ul>
         </nav>
 

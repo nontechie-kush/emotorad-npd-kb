@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global E-Bike Market — 2025 Infographic</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f4f6fa;
+  --surface: #eaecf2;
+  --card: #ffffff;
+  --border: #d1d9e6;
+  --text: #0f1c30;
+  --muted: #5a6e8a;
+  --accent: #c47d00;
+  --europe: #1d4ed8;
+  --india: #15803d;
+  --usa: #b91c1c;
+  --gravel: #7c3aed;
+  --cargo: #c2410c;
+  --urban: #0284c7;
+  --commute: #047857;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0; opacity: 0.06;
+}
+.wrap { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 40px 24px 80px; }
+
+/* back link */
+.back-link { display: inline-block; margin-bottom: 28px; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: var(--muted); text-decoration: none; padding: 6px 14px; border: 1px solid var(--border); border-radius: 6px; background: var(--card); }
+.back-link:hover { color: var(--accent); border-color: var(--accent); }
+
+/* HEADER */
+.header { text-align: center; margin-bottom: 60px; }
+.header-eyebrow { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 4px; color: var(--accent); text-transform: uppercase; margin-bottom: 12px; }
+.header h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(56px, 8vw, 96px); line-height: 0.9; color: var(--text); letter-spacing: 2px; }
+.header h1 span { color: var(--accent); }
+.header-sub { font-size: 15px; color: var(--muted); margin-top: 16px; }
+
+/* DATA NOTE BANNER */
+.data-note { background: rgba(29,78,216,0.06); border: 1px solid rgba(29,78,216,0.2); border-radius: 10px; padding: 14px 20px; margin-bottom: 40px; font-size: 12px; color: var(--muted); line-height: 1.6; }
+.data-note strong { color: var(--text); }
+
+/* GLOBAL TOTALS */
+.global-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 60px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+.global-stat { background: var(--card); padding: 28px 24px; text-align: center; position: relative; }
+.global-stat::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; }
+.global-stat.rev::after { background: var(--accent); }
+.global-stat.units::after { background: var(--europe); }
+.global-stat.cagr::after { background: var(--india); }
+.stat-label { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; margin-bottom: 8px; }
+.stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 52px; line-height: 1; color: var(--text); }
+.stat-unit { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.stat-note { font-size: 11px; color: var(--accent); margin-top: 6px; font-family: 'Space Mono', monospace; }
+
+/* SECTION TITLES */
+.section-title { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 2px; color: var(--muted); margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
+.section-title::before { content: ''; display: block; width: 4px; height: 28px; background: var(--accent); border-radius: 2px; }
+
+/* MARKET SPLIT VISUAL */
+.market-split { margin-bottom: 60px; }
+.split-bar-wrap { position: relative; height: 64px; border-radius: 10px; overflow: hidden; margin-bottom: 16px; display: flex; }
+.split-seg { display: flex; align-items: center; justify-content: center; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; cursor: default; }
+.split-seg.eu { background: linear-gradient(135deg, #1d4ed8, #3b82f6); flex: 17.25; color: white; }
+.split-seg.in { background: linear-gradient(135deg, #15803d, #22c55e); flex: 1.1; }
+.split-seg.us { background: linear-gradient(135deg, #b91c1c, #ef4444); flex: 1.55; }
+.split-labels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.split-label { background: var(--card); border-radius: 8px; padding: 16px 20px; border-left: 3px solid; }
+.split-label.eu { border-color: var(--europe); }
+.split-label.in { border-color: var(--india); }
+.split-label.us { border-color: var(--usa); }
+.sl-name { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 1px; }
+.sl-rev { font-size: 28px; font-family: 'Bebas Neue', sans-serif; margin: 4px 0; }
+.sl-detail { font-size: 12px; color: var(--muted); }
+
+/* COUNTRY CARDS */
+.countries { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 60px; }
+.country-card { background: var(--card); border-radius: 16px; overflow: hidden; border: 1px solid var(--border); display: flex; flex-direction: column; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+.cc-header { padding: 20px 24px 16px; position: relative; }
+.cc-header.eu { background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border-bottom: 1px solid #93c5fd; }
+.cc-header.in { background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); border-bottom: 1px solid #86efac; }
+.cc-header.us { background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border-bottom: 1px solid #fca5a5; }
+.cc-flag { font-size: 28px; }
+.cc-name { font-family: 'Bebas Neue', sans-serif; font-size: 30px; letter-spacing: 2px; line-height: 1; }
+.cc-subtitle { font-size: 11px; color: var(--muted); font-family: 'Space Mono', monospace; margin-top: 4px; }
+.cc-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border-bottom: 1px solid var(--border); }
+.cc-stat { background: #f8fafc; padding: 14px 16px; }
+.cs-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; font-family: 'Space Mono', monospace; }
+.cs-val { font-family: 'Bebas Neue', sans-serif; font-size: 22px; margin-top: 2px; }
+.cs-val.eu { color: var(--europe); }
+.cs-val.in { color: var(--india); }
+.cs-val.us { color: var(--usa); }
+.cc-body { padding: 16px 20px; flex: 1; }
+
+/* AGE PERSONA BAND */
+.age-band { margin-bottom: 16px; }
+.ab-label { font-size: 11px; color: var(--muted); font-family: 'Space Mono', monospace; letter-spacing: 1px; margin-bottom: 8px; text-transform: uppercase; }
+.ab-bar { height: 32px; background: var(--surface); border-radius: 6px; overflow: hidden; display: flex; }
+.ab-seg { height: 100%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; font-family: 'Space Mono', monospace; color: rgba(255,255,255,0.95); text-shadow: 0 1px 2px rgba(0,0,0,0.3); }
+.ab-seg.s1 { background: rgba(100,116,139,0.25); }
+.ab-seg.s2 { background: rgba(29,78,216,0.75); }
+.ab-seg.s3 { background: rgba(37,99,235,0.3); }
+.ab-seg.g1 { background: rgba(21,128,61,0.75); }
+.ab-seg.g2 { background: rgba(4,120,87,0.5); }
+.ab-seg.g3 { background: rgba(100,116,139,0.15); }
+.ab-seg.r1 { background: rgba(185,28,28,0.75); }
+.ab-seg.r2 { background: rgba(194,65,12,0.5); }
+.ab-seg.r3 { background: rgba(100,116,139,0.15); }
+
+/* BUYER SEGMENTS */
+.segments-grid { display: flex; flex-direction: column; gap: 6px; }
+.seg-row { display: flex; align-items: center; gap: 10px; }
+.seg-icon { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+.seg-info { flex: 1; }
+.seg-name { font-size: 12px; font-weight: 700; color: var(--text); }
+.seg-detail { font-size: 10px; color: var(--muted); }
+.seg-bar-wrap { width: 80px; }
+.seg-bar { height: 6px; border-radius: 3px; }
+
+/* PRODUCT MIX */
+.product-mix { margin-bottom: 60px; }
+.pm-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.pm-card { background: var(--card); border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid var(--border); position: relative; overflow: hidden; }
+.pm-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+.pm-card.gravel::before { background: var(--gravel); }
+.pm-card.urban::before { background: var(--urban); }
+.pm-card.cargo::before { background: var(--cargo); }
+.pm-card.mtb::before { background: #ec4899; }
+.pm-card.b2b::before { background: var(--commute); }
+.pm-icon { font-size: 32px; margin-bottom: 8px; }
+.pm-name { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1px; margin-bottom: 6px; }
+.pm-price-eu { font-size: 11px; color: var(--europe); }
+.pm-price-in { font-size: 11px; color: var(--india); }
+.pm-growth { font-size: 12px; font-weight: 700; margin-top: 8px; font-family: 'Space Mono', monospace; }
+
+/* PERSONA FLOW */
+.flow { margin-bottom: 60px; }
+.flow-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.flow-col { display: flex; flex-direction: column; gap: 12px; }
+.flow-col-header { text-align: center; padding: 10px; border-radius: 8px; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 2px; }
+.flow-col-header.eu { background: rgba(59,130,246,0.15); color: var(--europe); border: 1px solid rgba(59,130,246,0.3); }
+.flow-col-header.in { background: rgba(34,197,94,0.15); color: var(--india); border: 1px solid rgba(34,197,94,0.3); }
+.flow-col-header.us { background: rgba(239,68,68,0.15); color: var(--usa); border: 1px solid rgba(239,68,68,0.3); }
+.persona-card { background: var(--surface); border-radius: 10px; padding: 14px 16px; border: 1px solid var(--border); }
+.persona-tag { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; font-family: 'Space Mono', monospace; color: var(--muted); margin-bottom: 6px; }
+.persona-name { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
+.persona-age { font-size: 11px; color: var(--muted); margin-bottom: 8px; }
+.persona-pills { display: flex; flex-wrap: wrap; gap: 4px; }
+.pill { font-size: 9px; padding: 2px 7px; border-radius: 99px; font-weight: 600; letter-spacing: 0.5px; }
+.pill-gravel { background: rgba(124,58,237,0.1); color: var(--gravel); border: 1px solid rgba(167,139,250,0.3); }
+.pill-urban { background: rgba(2,132,199,0.1); color: var(--europe); border: 1px solid rgba(56,189,248,0.3); }
+.pill-cargo { background: rgba(194,65,12,0.1); color: var(--cargo); border: 1px solid rgba(251,146,60,0.3); }
+.pill-commute { background: rgba(4,120,87,0.1); color: var(--commute); border: 1px solid rgba(52,211,153,0.3); }
+.pill-mtb { background: rgba(162,28,175,0.1); color: #a21caf; border: 1px solid rgba(236,72,153,0.3); }
+.pill-price { background: rgba(196,125,0,0.08); color: var(--accent); border: 1px solid rgba(240,165,0,0.3); }
+.win-trigger { font-size: 10px; color: var(--accent); margin-top: 8px; font-style: italic; }
+
+/* INSIGHT BOX */
+.insight-box { background: linear-gradient(135deg, rgba(196,125,0,0.07), rgba(196,125,0,0.02)); border: 1px solid rgba(240,165,0,0.25); border-radius: 12px; padding: 24px 28px; margin-bottom: 60px; }
+.ib-title { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 2px; color: var(--accent); margin-bottom: 16px; }
+.ib-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.ib-item { display: flex; gap: 12px; align-items: flex-start; }
+.ib-num { font-family: 'Bebas Neue', sans-serif; font-size: 36px; line-height: 1; color: var(--accent); flex-shrink: 0; }
+.ib-text { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.ib-text strong { color: var(--text); }
+
+/* EU COUNTRIES */
+.eu-countries { margin-bottom: 60px; }
+.eu-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+.eu-country { background: var(--card); border-radius: 8px; padding: 12px 10px; text-align: center; border: 1px solid var(--border); }
+.euc-flag { font-size: 20px; }
+.euc-name { font-size: 9px; color: var(--muted); font-family: 'Space Mono', monospace; margin: 4px 0; }
+.euc-val { font-family: 'Bebas Neue', sans-serif; font-size: 16px; color: var(--europe); }
+.euc-unit { font-size: 8px; color: var(--muted); }
+
+/* WHITE SPACE */
+.whitespace { background: var(--card); border-radius: 16px; padding: 32px; border: 1px solid var(--border); margin-bottom: 60px; }
+.ws-title { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 2px; color: var(--accent); margin-bottom: 20px; }
+.ws-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.ws-item { background: var(--surface); border-radius: 10px; padding: 16px; border-left: 3px solid var(--accent); }
+.ws-geo { font-size: 10px; font-family: 'Space Mono', monospace; color: var(--muted); letter-spacing: 1px; margin-bottom: 6px; }
+.ws-name { font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+.ws-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+/* FOOTER */
+.footer { text-align: center; font-family: 'Space Mono', monospace; font-size: 10px; color: var(--muted); padding-top: 20px; border-top: 1px solid var(--border); letter-spacing: 1px; }
+
+/* TABLES */
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead tr { background: var(--surface); }
+th { padding: 10px 14px; text-align: left; font-size: 11px; font-family: 'Space Mono', monospace; letter-spacing: 0.5px; color: var(--muted); border-bottom: 2px solid var(--border); }
+td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #f8fafc; }
+
+/* ANIMATE IN */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.animate { animation: fadeUp 0.6s ease forwards; }
+.d1 { animation-delay: 0.1s; opacity: 0; }
+.d2 { animation-delay: 0.2s; opacity: 0; }
+.d3 { animation-delay: 0.3s; opacity: 0; }
+.d4 { animation-delay: 0.4s; opacity: 0; }
+.d5 { animation-delay: 0.5s; opacity: 0; }
+.d6 { animation-delay: 0.6s; opacity: 0; }
+
+@media (max-width: 900px) {
+  .countries, .flow-grid { grid-template-columns: 1fr; }
+  .global-bar, .split-labels, .pm-grid, .ib-grid, .ws-grid, .eu-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a href="/docs/index" class="back-link">← Back to KB</a>
+
+<!-- HEADER -->
+<div class="header animate d1">
+  <div class="header-eyebrow">e-motorad npd intelligence · session 1 · may 2026</div>
+  <h1>3-Geography <span>E-Bike</span><br>Market 2025</h1>
+  <p class="header-sub">Europe · India · USA — Revenue · Volume · Consumer Personas · Product Segments · White Spaces</p>
+</div>
+
+<!-- DATA NOTE BANNER -->
+<div class="data-note animate d1">
+  <strong>Data scope note:</strong> This infographic covers Europe + India + USA only (~$20B combined). It is <strong>not</strong> a global total — China alone sells ~25–30M units/year. The $45B figure referenced in some sections is the <strong>2032 forecast</strong> for these 3 geographies, not a current figure. Per-brand market share estimates in competitive tables are directional analyst estimates, not audited figures.
+</div>
+
+<!-- GLOBAL TOTALS -->
+<div class="global-bar animate d2">
+  <div class="global-stat rev">
+    <div class="stat-label">3-Geography Combined Revenue</div>
+    <div class="stat-num">~$20B</div>
+    <div class="stat-unit">Europe + India + USA (2025)</div>
+    <div class="stat-note">→ ~$40B forecast by 2032 (same 3 geographies)</div>
+  </div>
+  <div class="global-stat units">
+    <div class="stat-label">Combined Units Sold (2025)</div>
+    <div class="stat-num">~9M</div>
+    <div class="stat-unit">Europe + India + USA</div>
+    <div class="stat-note">Europe dominates at 6–7M units</div>
+  </div>
+  <div class="global-stat cagr">
+    <div class="stat-label">Avg CAGR 2024–2032</div>
+    <div class="stat-num">~10%</div>
+    <div class="stat-unit">Weighted average across 3 markets</div>
+    <div class="stat-note">India 8.7–13.4% · Europe 10.05% · USA 7.8%</div>
+  </div>
+</div>
+
+<!-- MARKET REVENUE SPLIT -->
+<div class="market-split animate d3">
+  <div class="section-title">Revenue Split by Geography</div>
+  <div class="split-bar-wrap">
+    <div class="split-seg eu">EUROPE 87%</div>
+    <div class="split-seg in" title="India ~6%"></div>
+    <div class="split-seg us" title="USA ~8%"></div>
+  </div>
+  <div class="split-labels">
+    <div class="split-label eu">
+      <div class="sl-name" style="color:var(--europe)">🇪🇺 Europe</div>
+      <div class="sl-rev" style="color:var(--europe)">$17.25B</div>
+      <div class="sl-detail">6–7M units · CAGR 10.05% · → $37.1B by 2032</div>
+    </div>
+    <div class="split-label in">
+      <div class="sl-name" style="color:var(--india)">🇮🇳 India</div>
+      <div class="sl-rev" style="color:var(--india)">$720M–$1.4B</div>
+      <div class="sl-detail">0.5–0.6M units · CAGR 8.7–13.4% · → $2–3B by 2033</div>
+    </div>
+    <div class="split-label us">
+      <div class="sl-name" style="color:var(--usa)">🇺🇸 USA</div>
+      <div class="sl-rev" style="color:var(--usa)">$1.1–2B</div>
+      <div class="sl-detail">~1.5M units · CAGR 7.8% · Rad Power bankrupt Dec 2025</div>
+    </div>
+  </div>
+</div>
+
+<!-- EUROPE COUNTRY BREAKDOWN -->
+<div class="eu-countries animate d4">
+  <div class="section-title">Europe: Country-Level Units Sold (2024)</div>
+  <div class="eu-grid">
+    <div class="eu-country"><div class="euc-flag">🇩🇪</div><div class="euc-name">Germany</div><div class="euc-val">2.05M</div><div class="euc-unit">units · avg €2,650</div></div>
+    <div class="eu-country"><div class="euc-flag">🇳🇱</div><div class="euc-name">Netherlands</div><div class="euc-val">~1.3M</div><div class="euc-unit">units · highest per-capita</div></div>
+    <div class="eu-country"><div class="euc-flag">🇫🇷</div><div class="euc-name">France</div><div class="euc-val">~750K</div><div class="euc-unit">units est.</div></div>
+    <div class="eu-country"><div class="euc-flag">🇮🇹</div><div class="euc-name">Italy</div><div class="euc-val">~300K</div><div class="euc-unit">units est.</div></div>
+    <div class="eu-country"><div class="euc-flag">🇧🇪</div><div class="euc-name">Belgium</div><div class="euc-val">~200K</div><div class="euc-unit">units est.</div></div>
+    <div class="eu-country"><div class="euc-flag">🇦🇹</div><div class="euc-name">Austria</div><div class="euc-val">220K</div><div class="euc-unit">52% of bike mkt</div></div>
+    <div class="eu-country"><div class="euc-flag">🇪🇸</div><div class="euc-name">Spain</div><div class="euc-val">235K</div><div class="euc-unit">+20% YoY</div></div>
+    <div class="eu-country"><div class="euc-flag">🇬🇧</div><div class="euc-name">UK</div><div class="euc-val">146K</div><div class="euc-unit">-5% in 2024</div></div>
+    <!-- FIXED: Poland shows e-bike segment (€293M), not total market (€1.1B) -->
+    <div class="eu-country"><div class="euc-flag">🇵🇱</div><div class="euc-name">Poland</div><div class="euc-val">~€293M</div><div class="euc-unit">e-bike seg (26% of €1.1B mkt)</div></div>
+  </div>
+</div>
+
+<!-- COUNTRY CONSUMER CARDS -->
+<div class="countries animate d4">
+
+  <!-- EUROPE -->
+  <div class="country-card">
+    <div class="cc-header eu">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div>
+          <div class="cc-flag">🇪🇺</div>
+          <div class="cc-name" style="color:#1d4ed8">Europe</div>
+          <div class="cc-subtitle">MATURE · HIGH-VALUE · LEASING-LED</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--muted)">Revenue</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--europe)">$17.25B</div>
+        </div>
+      </div>
+    </div>
+    <div class="cc-stats">
+      <div class="cc-stat"><div class="cs-label">Units (2024)</div><div class="cs-val eu">6–7M</div></div>
+      <div class="cc-stat"><div class="cs-label">CAGR</div><div class="cs-val eu">10.05%</div></div>
+      <div class="cc-stat"><div class="cs-label">Avg price (DE)</div><div class="cs-val eu">€2,650</div></div>
+      <div class="cc-stat"><div class="cs-label">Leased (DE)</div><div class="cs-val eu">~40%</div></div>
+    </div>
+    <div class="cc-body">
+      <div class="age-band">
+        <div class="ab-label">Consumer Age Distribution</div>
+        <div class="ab-bar">
+          <div class="ab-seg s1" style="width:12%">25–35</div>
+          <div class="ab-seg s2" style="width:55%">45–65 — CORE</div>
+          <div class="ab-seg s3" style="width:33%">65+</div>
+        </div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px">Peak buyer: 50–65 · High income (>€75K HH: 55%)</div>
+      </div>
+      <div class="segments-grid">
+        <div class="seg-row">
+          <div class="seg-icon" style="background:rgba(124,58,237,0.08)">🚵</div>
+          <div class="seg-info"><div class="seg-name">Gravel / Adventure</div><div class="seg-detail">+25% YoY Spain · €3K–€9K · mid-drive, torque sensor</div></div>
+          <div class="seg-bar-wrap"><div class="seg-bar" style="width:70%;background:var(--gravel)"></div></div>
+        </div>
+        <div class="seg-row">
+          <div class="seg-icon" style="background:rgba(2,132,199,0.08)">🏙️</div>
+          <div class="seg-info"><div class="seg-name">Urban / City</div><div class="seg-detail">45% market share · flat/declining · €1.8K–€3.5K</div></div>
+          <div class="seg-bar-wrap"><div class="seg-bar" style="width:45%;background:var(--urban)"></div></div>
+        </div>
+        <div class="seg-row">
+          <div class="seg-icon" style="background:rgba(194,65,12,0.08)">📦</div>
+          <div class="seg-info"><div class="seg-name">Cargo / Family</div><div class="seg-detail">+20% YoY · €4K–€12K · replacing second car</div></div>
+          <div class="seg-bar-wrap"><div class="seg-bar" style="width:55%;background:var(--cargo)"></div></div>
+        </div>
+        <div class="seg-row">
+          <div class="seg-icon" style="background:rgba(162,28,175,0.08)">⛰️</div>
+          <div class="seg-info"><div class="seg-name">e-MTB</div><div class="seg-detail">10% market · strong · Specialized, Trek, Giant</div></div>
+          <div class="seg-bar-wrap"><div class="seg-bar" style="width:40%;background:#ec4899"></div></div>
+        </div>
+        <div class="seg-row">
+          <div class="seg-icon" style="background:rgba(4,120,87,0.08)">💼</div>
+          <div class="seg-info"><div class="seg-name">Corporate Leasing</div><div class="seg-detail">Jobrad (DE) · ~40% of German market · B2B</div></div>
+          <div class="seg-bar-wrap"><div class="seg-bar" style="width:60%;background:var(--commute)"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDIA -->
+  <div class="country-card">
+    <div class="cc-header in">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div>
+          <div class="cc-flag">🇮🇳</div>
+          <div class="cc-name" style="color:#15803d">India</div>
+          <div class="cc-subtitle">EMERGING · HIGH GROWTH · B2B-LED</div>
+        </div>
+        <!-- FIXED: show range, not a single point estimate -->
+        <div style="text-align:right">
+          <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--muted)">Revenue</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--india)">$720M–$1.4B</div>
+        </div>
+      </div>
+    </div>
+    <div class="cc-stats">
+      <div class="cc-stat"><div class="cs-label">Units (2025)</div><div class="cs-val in">0.5–0.6M</div></div>
+      <div class="cc-stat"><div class="cs-label">CAGR</div><div class="cs-val in">8.7–13.4%</div></div>
+      <div class="cc-stat"><div class="cs-label">Market leader</div><div class="cs-val in">Hero Lectro</div></div>
+      <div class="cc-stat"><div class="cs-label">Leader share</div><div class="cs-val in">30–35%</div></div>
+    </div>
+    <div class="cc-body">
+      <div class="age-band">
+        <div class="ab-label">Consumer Age Distribution</div>
+        <div class="ab-bar">
+          <div class="ab-seg g1" style="width:55%">25–35 — CORE</div>
+          <div class="ab-seg g2" style="width:30%">35–45</div>
+          <div class="ab-seg g3" style="width:15%">45+</div>
+        </div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px">Urban IT/finance professional · ₹6–15L HH income · male-dominated 75%</div>
+      </div>
+      <div class="segments-grid">
+        <div class="seg-row">
+          <div class="seg-icon" style="background:rgba(2,132,199,0.08)">🏙️</div>
+          <div class="seg-info"><div class="seg-name">Urban Fitness Commuter</div><div class="seg-detail">₹60K–1.2L · mid-premium · wants premium look</div></div>
+          <div class="seg-bar-wrap"><div class="seg-bar" style="width:60%;background:var(--urban)"></div></div>
+        </div>
+        <div class="seg-row">
+          <div class="seg-icon" style="background:rgba(4,120,87,0.08)">🚵</div>
+          <div class="seg-info"><div class="seg-name">B2B Fleet (Delivery)</div><div class="seg-detail">Zomato/Swiggy · TCO-driven · fastest growing</div></div>
+          <div class="seg-bar-wrap"><div class="seg-bar" style="width:80%;background:var(--commute)"></div></div>
+        </div>
+        <div class="seg-row">
+          <div class="seg-icon" style="background:rgba(124,58,237,0.08)">🚵</div>
+          <div class="seg-info"><div class="seg-name">Premium Enthusiast</div><div class="seg-detail">₹1.5L–2.5L · gravel/adventure · <strong style="color:var(--accent)">WHITE SPACE</strong></div></div>
+          <div class="seg-bar-wrap"><div class="seg-bar" style="width:20%;background:var(--gravel)"></div></div>
+        </div>
+        <div class="seg-row">
+          <div class="seg-icon" style="background:rgba(194,65,12,0.08)">🎓</div>
+          <div class="seg-info"><div class="seg-name">College / Campus</div><div class="seg-detail">University towns · ₹30K–60K · entry-mid</div></div>
+          <div class="seg-bar-wrap"><div class="seg-bar" style="width:30%;background:var(--cargo)"></div></div>
+        </div>
+        <div class="seg-row">
+          <div class="seg-icon" style="background:rgba(162,28,175,0.08)">👩</div>
+          <div class="seg-info"><div class="seg-name">Women Professionals</div><div class="seg-detail">Emerging · step-through · vastly underserved</div></div>
+          <div class="seg-bar-wrap"><div class="seg-bar" style="width:15%;background:#ec4899"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- USA -->
+  <div class="country-card">
+    <div class="cc-header us">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div>
+          <div class="cc-flag">🇺🇸</div>
+          <div class="cc-name" style="color:#b91c1c">USA</div>
+          <div class="cc-subtitle">BIFURCATED · DTC-LED · POST-RAD ERA</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--muted)">Revenue</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--usa)">$1.1–2B</div>
+        </div>
+      </div>
+    </div>
+    <div class="cc-stats">
+      <div class="cc-stat"><div class="cs-label">Units (2025)</div><div class="cs-val us">~1.5M</div></div>
+      <div class="cc-stat"><div class="cs-label">CAGR</div><div class="cs-val us">7.8%</div></div>
+      <div class="cc-stat"><div class="cs-label">Class 1</div><div class="cs-val us">61%</div></div>
+      <div class="cc-stat"><div class="cs-label">Premium IBD</div><div class="cs-val us">$4K+</div></div>
+    </div>
+    <div class="cc-body">
+      <div class="age-band">
+        <div class="ab-label">Consumer Age Distribution</div>
+        <div class="ab-bar">
+          <div class="ab-seg r1" style="width:65%">35–54 — CORE (65% of owners)</div>
+          <div class="ab-seg r2" style="width:23%">25–35</div>
+          <div class="ab-seg r3" style="width:12%">55+</div>
+        </div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px">HHI >$100K: 30% of owners · Gen Z tripled to 12%</div>
+      </div>
+      <div class="segments-grid">
+        <div class="seg-row">
+          <div class="seg-icon" style="background:rgba(194,65,12,0.08)">🛒</div>
+          <div class="seg-info"><div class="seg-name">Mass DTC (&lt;$2K)</div><div class="seg-detail">Lectric, Aventon · hub motor · recreational</div></div>
+          <div class="seg-bar-wrap"><div class="seg-bar" style="width:70%;background:var(--cargo)"></div></div>
+        </div>
+        <div class="seg-row">
+          <div class="seg-icon" style="background:rgba(2,132,199,0.08)">🏙️</div>
+          <div class="seg-info"><div class="seg-name">Urban Commuter</div><div class="seg-detail">62% urban · replace car trips · Class 1/3</div></div>
+          <div class="seg-bar-wrap"><div class="seg-bar" style="width:50%;background:var(--urban)"></div></div>
+        </div>
+        <div class="seg-row">
+          <div class="seg-icon" style="background:rgba(124,58,237,0.08)">⚡</div>
+          <div class="seg-info"><div class="seg-name">Premium IBD ($4K+)</div><div class="seg-detail">Trek/Specialized · mid-drive · performance</div></div>
+          <div class="seg-bar-wrap"><div class="seg-bar" style="width:40%;background:var(--gravel)"></div></div>
+        </div>
+        <div class="seg-row">
+          <div class="seg-icon" style="background:rgba(4,120,87,0.08)">💰</div>
+          <div class="seg-info"><div class="seg-name">$2K–$4K Gap</div><div class="seg-detail"><strong style="color:var(--accent)">EMPTY · OPPORTUNITY</strong> for India-origin brand</div></div>
+          <div class="seg-bar-wrap"><div class="seg-bar" style="width:12%;background:var(--commute)"></div></div>
+        </div>
+        <div class="seg-row">
+          <div class="seg-icon" style="background:rgba(251,146,60,0.2)">📦</div>
+          <div class="seg-info"><div class="seg-name">e-Cargo</div><div class="seg-detail">Last-mile delivery + family · underdeveloped</div></div>
+          <div class="seg-bar-wrap"><div class="seg-bar" style="width:20%;background:var(--cargo)"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- PERSONA FLOW -->
+<div class="flow animate d5">
+  <div class="section-title">Consumer Persona Deep-Dive</div>
+  <div class="flow-grid">
+    <div class="flow-col">
+      <div class="flow-col-header eu">🇪🇺 Europe — 4 Personas</div>
+      <div class="persona-card">
+        <div class="persona-tag">Persona EU-1 · Germany/Austria/CH</div>
+        <div class="persona-name">🧓 The Silver Cyclist</div>
+        <div class="persona-age">Age 55–65 · Income €60K+ · Male-skewed</div>
+        <div class="persona-pills">
+          <span class="pill pill-gravel">Gravel / Trekking</span>
+          <span class="pill pill-price">€3,000–€6,000</span>
+          <span class="pill pill-commute">Bosch mandatory</span>
+        </div>
+        <div class="win-trigger">"This bike will let me ride for another 20 years"</div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-tag">Persona EU-2 · Netherlands/Belgium</div>
+        <div class="persona-name">🚲 The Urban Commuter</div>
+        <div class="persona-age">Age 35–50 · Income €45K+ · Any gender</div>
+        <div class="persona-pills">
+          <span class="pill pill-urban">City / Utility</span>
+          <span class="pill pill-price">€1,800–€3,500</span>
+          <span class="pill pill-commute">Hub motor OK</span>
+        </div>
+        <div class="win-trigger">"This just works, every day, in any weather"</div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-tag">Persona EU-3 · Spain/Italy/France</div>
+        <div class="persona-name">🏕️ The Adventure Gravel Rider</div>
+        <div class="persona-age">Age 38–55 · Income €70K+ · Male-skewed</div>
+        <div class="persona-pills">
+          <span class="pill pill-gravel">Gravel / Adventure</span>
+          <span class="pill pill-price">€3,000–€7,000</span>
+          <span class="pill pill-mtb">Mid-drive · torque sensor</span>
+        </div>
+        <div class="win-trigger">"This rides like a real bike, not a heavy e-bike"</div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-tag">Persona EU-4 · Germany/Belgium/UK</div>
+        <div class="persona-name">💼 The Corporate Leaser (Jobrad)</div>
+        <div class="persona-age">Age 30–45 · Employer-subsidized · Any gender</div>
+        <div class="persona-pills">
+          <span class="pill pill-urban">Commute + Weekend</span>
+          <span class="pill pill-price">€3,000–€5,000</span>
+          <span class="pill pill-commute">Jobrad eligible</span>
+        </div>
+        <div class="win-trigger">"Qualifies for Jobrad, great specs, good brand story"</div>
+      </div>
+    </div>
+
+    <div class="flow-col">
+      <div class="flow-col-header in">🇮🇳 India — 5 Personas</div>
+      <div class="persona-card">
+        <div class="persona-tag">Persona IN-1 · Tier 1 cities</div>
+        <div class="persona-name">💻 Urban Fitness Commuter</div>
+        <div class="persona-age">Age 27–38 · ₹6–15L income · IT/finance professional</div>
+        <div class="persona-pills">
+          <span class="pill pill-urban">City + Weekend Rides</span>
+          <span class="pill pill-price">₹60K–1.2L</span>
+          <span class="pill pill-commute">Instagram-discovered</span>
+        </div>
+        <div class="win-trigger">"Looks premium, doesn't look like a delivery bike"</div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-tag">Persona IN-2 · B2B · All cities</div>
+        <div class="persona-name">📦 Delivery Fleet Operator</div>
+        <div class="persona-age">Age 22–35 · Zomato/Swiggy/Blinkit · TCO-driven</div>
+        <div class="persona-pills">
+          <span class="pill pill-commute">B2B Fleet</span>
+          <span class="pill pill-price">Fleet TCO pricing</span>
+          <span class="pill pill-cargo">70–90km range needed</span>
+        </div>
+        <div class="win-trigger">"Show me the ₹/km calculation vs petrol"</div>
+      </div>
+      <div class="persona-card" style="border-color:rgba(240,165,0,0.4)">
+        <div class="persona-tag">Persona IN-3 · WHITE SPACE ⚡</div>
+        <div class="persona-name">🚵 Premium Enthusiast / Gravel</div>
+        <div class="persona-age">Age 32–50 · ₹25L+ income · active cyclist</div>
+        <div class="persona-pills">
+          <span class="pill pill-gravel">Gravel / Adventure</span>
+          <span class="pill pill-price">₹1.5L–2.5L</span>
+          <span class="pill pill-mtb">Mid-drive · integrated batt.</span>
+        </div>
+        <div class="win-trigger">"An Indian brand that actually handles Nandi Hills"</div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-tag">Persona IN-4 · University towns</div>
+        <div class="persona-name">🎓 College Student</div>
+        <div class="persona-age">Age 18–24 · ₹3–6L family income · campus mobility</div>
+        <div class="persona-pills">
+          <span class="pill pill-urban">Campus Commute</span>
+          <span class="pill pill-price">₹30K–60K</span>
+          <span class="pill pill-commute">Entry-mid segment</span>
+        </div>
+        <div class="win-trigger">"Cheaper than a scooter, no license needed"</div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-tag">Persona IN-5 · Tier 1 cities · Underserved</div>
+        <div class="persona-name">👩 Urban Women Professional</div>
+        <div class="persona-age">Age 28–40 · ₹8–20L income · fitness + commute</div>
+        <div class="persona-pills">
+          <span class="pill pill-mtb">Step-through frame</span>
+          <span class="pill pill-price">₹60K–1L</span>
+          <span class="pill pill-urban">Safety + lightweight</span>
+        </div>
+        <div class="win-trigger">"Built for me, not just a smaller version of a men's bike"</div>
+      </div>
+    </div>
+
+    <div class="flow-col">
+      <div class="flow-col-header us">🇺🇸 USA — 4 Personas</div>
+      <div class="persona-card">
+        <div class="persona-tag">Persona US-1 · Suburban · DTC</div>
+        <div class="persona-name">🏡 The Mass Market Recreational</div>
+        <div class="persona-age">Age 40–55 · $60–100K HH · suburban</div>
+        <div class="persona-pills">
+          <span class="pill pill-cargo">Leisure / Recreation</span>
+          <span class="pill pill-price">$800–$2,000</span>
+          <span class="pill pill-commute">Throttle capability wanted</span>
+        </div>
+        <div class="win-trigger">"I can keep up with my kids on trails"</div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-tag">Persona US-2 · Urban · All ages</div>
+        <div class="persona-name">🏙️ The Urban Car-Replacer</div>
+        <div class="persona-age">Age 28–50 · 62% urban · env. conscious</div>
+        <div class="persona-pills">
+          <span class="pill pill-urban">Commute + Errands</span>
+          <span class="pill pill-price">$1,500–$3,500</span>
+          <span class="pill pill-commute">Class 1 or 3</span>
+        </div>
+        <div class="win-trigger">"Sold my second car since buying this"</div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-tag">Persona US-3 · IBD channel · Premium</div>
+        <div class="persona-name">⚡ The Performance Cyclist</div>
+        <div class="persona-age">Age 45–60 · $100K+ HH · already a cyclist</div>
+        <div class="persona-pills">
+          <span class="pill pill-gravel">Road / Gravel / e-MTB</span>
+          <span class="pill pill-price">$4,000–$12,000</span>
+          <span class="pill pill-mtb">Mid-drive · torque sensor</span>
+        </div>
+        <div class="win-trigger">"Bosch or Shimano, test ride, 3-year warranty"</div>
+      </div>
+      <div class="persona-card" style="border-color:rgba(240,165,0,0.4)">
+        <div class="persona-tag">Persona US-4 · GAP OPPORTUNITY ⚡</div>
+        <div class="persona-name">🎯 The Mid-Market Upgrade Seeker</div>
+        <div class="persona-age">Age 30–45 · $80–120K HH · too sophisticated for DTC</div>
+        <div class="persona-pills">
+          <span class="pill pill-urban">Commute + Performance</span>
+          <span class="pill pill-price">$2,000–$4,000 gap</span>
+          <span class="pill pill-gravel">Mid-drive preferred</span>
+        </div>
+        <div class="win-trigger">"Better than Lectric, don't need to pay Trek prices"</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCT SEGMENT MIX -->
+<div class="product-mix animate d5">
+  <div class="section-title">Product Segments — Growth & Price Position</div>
+  <div class="pm-grid">
+    <div class="pm-card gravel">
+      <div class="pm-icon">🚵</div>
+      <div class="pm-name" style="color:var(--gravel)">Gravel / Adventure</div>
+      <div class="pm-growth" style="color:var(--gravel)">+25% YoY 🔥</div>
+      <div style="font-size:11px;color:var(--muted);margin:8px 0 4px">EU Price Range:</div>
+      <div class="pm-price-eu">€2,400–€9,000</div>
+      <div style="font-size:11px;color:var(--muted);margin:4px 0">India White Space:</div>
+      <div class="pm-price-in">₹1.5L–2.5L (EMPTY)</div>
+    </div>
+    <div class="pm-card urban">
+      <div class="pm-icon">🏙️</div>
+      <div class="pm-name" style="color:var(--urban)">Urban / City</div>
+      <div class="pm-growth" style="color:var(--muted)">Flat / Declining</div>
+      <div style="font-size:11px;color:var(--muted);margin:8px 0 4px">EU Price Range:</div>
+      <div class="pm-price-eu">€1,800–€3,500</div>
+      <div style="font-size:11px;color:var(--muted);margin:4px 0">India:</div>
+      <div class="pm-price-in">₹60K–1.2L (Crowded)</div>
+    </div>
+    <div class="pm-card cargo">
+      <div class="pm-icon">📦</div>
+      <div class="pm-name" style="color:var(--cargo)">Cargo / Fleet</div>
+      <div class="pm-growth" style="color:var(--cargo)">+20% YoY 📈</div>
+      <div style="font-size:11px;color:var(--muted);margin:8px 0 4px">EU Price Range:</div>
+      <div class="pm-price-eu">€4,000–€12,000</div>
+      <div style="font-size:11px;color:var(--muted);margin:4px 0">India:</div>
+      <div class="pm-price-in">Fleet TCO (Emerging)</div>
+    </div>
+    <div class="pm-card mtb">
+      <div class="pm-icon">⛰️</div>
+      <div class="pm-name" style="color:#f9a8d4">e-MTB</div>
+      <div class="pm-growth" style="color:#f9a8d4">Strong Growth</div>
+      <div style="font-size:11px;color:var(--muted);margin:8px 0 4px">EU Price Range:</div>
+      <div class="pm-price-eu">€3,500–€10,000</div>
+      <div style="font-size:11px;color:var(--muted);margin:4px 0">India:</div>
+      <div class="pm-price-in">Not yet established</div>
+    </div>
+    <div class="pm-card b2b">
+      <div class="pm-icon">🚵</div>
+      <div class="pm-name" style="color:var(--commute)">B2B / Delivery</div>
+      <div class="pm-growth" style="color:var(--commute)">Fastest India 📈</div>
+      <div style="font-size:11px;color:var(--muted);margin:8px 0 4px">EU:</div>
+      <div class="pm-price-eu">Cargo bikes (DHL, UPS)</div>
+      <div style="font-size:11px;color:var(--muted);margin:4px 0">India:</div>
+      <div class="pm-price-in">₹30K–55K (Fleet TCO)</div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPETITIVE LANDSCAPE -->
+<div class="animate d5" style="margin-bottom:60px">
+  <div class="section-title">🇪🇺 Europe — Competitive Landscape by Segment</div>
+  <div class="data-note" style="margin-bottom:24px">
+    <strong>Important:</strong> Per-brand segment share figures below are directional analyst estimates — CONEBI and Mordor Intelligence do not publish per-brand per-segment share data publicly. Use these as relative indicators, not citable statistics.
+  </div>
+
+  <!-- GRAVEL -->
+  <div style="margin-bottom:32px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+      <div style="background:rgba(124,58,237,0.08);border:1px solid rgba(167,139,250,0.3);border-radius:8px;padding:8px 16px;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--gravel)">🚵 Gravel / Adventure E-Bikes</div>
+      <div style="font-size:12px;color:var(--muted)">~25% of EU e-bike market · +15–25% YoY · FASTEST growing</div>
+      <div style="margin-left:auto;font-family:'Space Mono',monospace;font-size:11px;color:var(--gravel);background:rgba(167,139,250,0.08);border:1px solid rgba(167,139,250,0.2);padding:4px 12px;border-radius:99px">~€4.3B 🔥</div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>Brand</th><th>Origin</th><th>Est. Share (directional)</th><th>Active SKUs (2025)</th><th>Price Range</th><th>Motor</th><th>Positioning</th></tr></thead>
+      <tbody>
+        <tr><td><strong style="color:var(--accent)">Orbea (Denna)</strong></td><td>🇪🇸 Spain</td><td>Leading</td><td>7 SKUs (H50–M11E)</td><td>£2,400–£8,999</td><td>Shimano EP600RS / EP801RS</td><td>Widest gravel range · Spanish home-market advantage · integrated battery</td></tr>
+        <tr><td><strong>Canyon (Grail:ON / Grizl:ON)</strong></td><td>🇩🇪 Germany</td><td>Strong</td><td>7 SKUs</td><td>$3,699–€6,000</td><td>Bosch SX Sprint / CX Gen4</td><td>D2C · best value-for-spec · 500Wh battery</td></tr>
+        <tr><td><strong>Specialized (Creo 2)</strong></td><td>🇺🇸 USA</td><td>Strong</td><td>4 SKUs</td><td>€6,500–€8,500</td><td>Specialized SL 1.2 (proprietary)</td><td>Lightest in class (14.5kg) · stealth design · performance cyclist</td></tr>
+        <tr><td><strong>Trek (Checkpoint+)</strong></td><td>🇺🇸 USA</td><td>Moderate</td><td>3 SKUs</td><td>€5,000–€8,000+</td><td>Fazua Ride 60 / Bosch SX</td><td>IBD-only · trusted brand · race geometry</td></tr>
+        <tr><td><strong>Cannondale (Topstone Neo)</strong></td><td>🇺🇸 USA</td><td>Moderate</td><td>4 SKUs</td><td>€3,499–€7,499</td><td>Mahle X20 / Shimano EP8</td><td>Kingpin rear suspension · adventure-ready</td></tr>
+        <tr><td><strong>Cube (Nuroad Hybrid)</strong></td><td>🇩🇪 Germany</td><td>Moderate</td><td>3 SKUs</td><td>€2,499–€4,499</td><td>Bosch Performance SX</td><td>Entry gravel · accessible price · wide dealer</td></tr>
+        <tr><td><strong>Decathlon (Van Rysel E-GRVL)</strong></td><td>🇫🇷 France</td><td>Growing fast</td><td>2 SKUs</td><td>€2,499–€3,499</td><td>Shimano EP8 / Mahle</td><td>New price floor (2024) · carbon fork · mass-market disruptor</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div style="background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);border-radius:8px;padding:12px 16px;margin-top:10px;font-size:12px;color:var(--muted)">
+      ✅ <strong style="color:#86efac">e-motorad opportunity:</strong> Decathlon's Van Rysel entered at €2,499 in 2024 — that's the new price floor. <strong style="color:var(--text)">Target €2,200–€2,800 with Shimano EP600RS + integrated battery + torque sensor.</strong> Undercut Orbea Denna H50 on price while outspeccing Decathlon on component quality. Spain first.
+    </div>
+  </div>
+
+  <!-- URBAN -->
+  <div style="margin-bottom:32px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+      <div style="background:rgba(2,132,199,0.08);border:1px solid rgba(56,189,248,0.3);border-radius:8px;padding:8px 16px;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--urban)">🏙️ Urban / City E-Bikes</div>
+      <div style="font-size:12px;color:var(--muted)">~45% of EU e-bike market · Flat/declining · Most crowded</div>
+      <div style="margin-left:auto;font-family:'Space Mono',monospace;font-size:11px;color:var(--urban);background:rgba(56,189,248,0.08);border:1px solid rgba(56,189,248,0.2);padding:4px 12px;border-radius:99px">~€7.8B</div>
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>Brand</th><th>Origin</th><th>Active SKUs</th><th>Price Range</th><th>Motor</th><th>Positioning</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Gazelle</strong></td><td>🇳🇱 Netherlands</td><td>12+</td><td>€2,200–€5,500</td><td>Bosch Active/Performance</td><td>Dutch icon · step-through · comfort-first · 10yr warranty</td></tr>
+        <tr><td><strong>Cube</strong></td><td>🇩🇪 Germany</td><td>15+</td><td>€1,799–€4,999</td><td>Bosch (all models)</td><td>Best value-for-spec · massive range · wide dealer</td></tr>
+        <tr><td><strong>Kalkhoff</strong></td><td>🇩🇪 Germany</td><td>10+</td><td>€2,000–€6,500</td><td>Bosch</td><td>German engineering · commuter reliability · century-old brand</td></tr>
+        <tr><td><strong>Giant</strong></td><td>🇹🇼 Taiwan</td><td>8</td><td>€1,999–€4,499</td><td>Yamaha / Giant SyncDrive</td><td>Volume + value · 2025 Smart Assist refresh</td></tr>
+        <tr><td><strong>Specialized (Turbo Vado SL)</strong></td><td>🇺🇸 USA</td><td>4</td><td>€3,499–€7,499</td><td>Specialized SL 1.2</td><td>Lightest urban · stealth design · premium</td></tr>
+        <tr><td><strong>Decathlon (B'Twin)</strong></td><td>🇫🇷 France</td><td>20+</td><td>€799–€2,499</td><td>Shimano Steps / own</td><td>Mass-market disruptor · anchors price floor · 3,500+ EU stores</td></tr>
+        <tr><td><strong>Cowboy</strong></td><td>🇧🇪 Belgium</td><td>4</td><td>€2,999–€3,799</td><td>Proprietary hub</td><td>Design-led · app-first · at-home service · tech-savvy urban</td></tr>
+        <tr><td><strong>Riese &amp; Müller</strong></td><td>🇩🇪 Germany</td><td>6</td><td>€4,500–€8,000+</td><td>Bosch Performance CX / SX</td><td>Ultra-premium · dual-battery · speed pedelec options</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div style="background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.15);border-radius:8px;padding:12px 16px;margin-top:10px;font-size:12px;color:var(--muted)">
+      ⚠️ <strong style="color:#fca5a5">e-motorad verdict:</strong> Urban is the most crowded, lowest-growth segment. <strong style="color:var(--text)">Do not enter here as a first move.</strong> The only opening: women-specific city e-bike (step-through, lighter, designed for women) — nobody does this properly yet.
+    </div>
+  </div>
+
+  <!-- SEGMENT SUMMARY -->
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-top:8px">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--accent);margin-bottom:16px">Segment Summary — Where Should e-motorad Play?</div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>Segment</th><th>EU Market Size</th><th>Growth</th><th>Crowding</th><th>Price Floor</th><th>e-motorad Fit</th></tr></thead>
+      <tbody>
+        <tr><td>🏙️ Urban / City</td><td>~€7.8B</td><td style="color:var(--muted)">Flat / –2%</td><td style="color:var(--usa)">🔴 Very High</td><td>€799 (Decathlon)</td><td style="color:var(--usa)">✗ Avoid (unless women-specific)</td></tr>
+        <tr><td>🚵 Gravel / Adventure</td><td>~€4.3B</td><td style="color:var(--india)">+15–25% YoY</td><td style="color:var(--accent)">🟡 Medium</td><td>€2,499 (Decathlon)</td><td style="color:var(--india)">✅ YES — sub-€2,800 gap + women's variant</td></tr>
+        <tr><td>⛰️ e-MTB</td><td>~€1.7B</td><td style="color:var(--india)">+12% YoY</td><td style="color:var(--usa)">🔴 High</td><td>€2,499 (Decathlon)</td><td style="color:var(--muted)">⏳ Year 3–4 only</td></tr>
+        <tr><td>📦 Cargo</td><td>~€1.8B</td><td style="color:var(--india)">+18–22% YoY</td><td style="color:var(--accent)">🟡 Medium</td><td>€2,499 (Cube)</td><td style="color:var(--accent)">🟡 India B2B now · Europe later</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<!-- WHITE SPACES -->
+<div class="whitespace animate d6">
+  <div class="ws-title">⚡ Strategic White Spaces for e-motorad</div>
+  <div class="ws-grid">
+    <div class="ws-item">
+      <div class="ws-geo">🇮🇳 India</div>
+      <div class="ws-name">Premium Gravel E-Bike</div>
+      <div class="ws-desc">₹1.5L–2.5L. No Indian brand makes a proper gravel e-bike with integrated battery + mid-drive. Imports cost ₹3–8L after 80% customs. Segment exists; product doesn't.</div>
+    </div>
+    <div class="ws-item">
+      <div class="ws-geo">🇪🇸 Europe (Spain first)</div>
+      <div class="ws-name">Sub-€2,800 Integrated Gravel</div>
+      <div class="ws-desc">Decathlon entered at €2,499 in 2024 — that's the new floor. Space between €2,200–€2,800 with proper Shimano EP600RS spec is still open. +25% YoY growth validates the segment.</div>
+    </div>
+    <div class="ws-item">
+      <div class="ws-geo">🇺🇸 USA</div>
+      <div class="ws-name">$2,000–$4,000 Mid-Market</div>
+      <div class="ws-desc">Largely empty. Too sophisticated for Lectric ($800), too price-sensitive for Trek ($4K+). An India-origin brand with Bafang M600 + torque sensor + integrated battery can own this.</div>
+    </div>
+    <div class="ws-item">
+      <div class="ws-geo">🇮🇳 India · All tiers</div>
+      <div class="ws-name">Women's E-Cycle</div>
+      <div class="ws-desc">Urban women 28–40, fitness + commute. Step-through frame, lighter weight, safety features. No Indian brand addresses this specifically. Growing buying power.</div>
+    </div>
+    <div class="ws-item">
+      <div class="ws-geo">🇮🇳 India · B2B</div>
+      <div class="ws-name">Fleet Management Platform</div>
+      <div class="ws-desc">IoT + GPS + battery state + maintenance alerts. Missing from all Indian e-cycle brands. Hyperlocal delivery boom (Blinkit 10-min) creating massive repeating fleet orders.</div>
+    </div>
+    <div class="ws-item">
+      <div class="ws-geo">🇪🇺 Europe · All</div>
+      <div class="ws-name">India-Origin Premium (Narrative)</div>
+      <div class="ws-desc">EU imposed 17.4–35.4% tariffs on Chinese e-bikes (Oct 2024). India-assembled products avoid this. "Designed for Indian terrain, built in India" = differentiation + tariff advantage.</div>
+    </div>
+  </div>
+</div>
+
+<!-- KEY INSIGHTS -->
+<div class="insight-box animate d6">
+  <div class="ib-title">5 Strategic Insights That Cut Across All Geographies</div>
+  <div class="ib-grid">
+    <div class="ib-item"><div class="ib-num">1</div><div class="ib-text"><strong>The ride feel IS the product.</strong> Every high-value buyer — India Enthusiast, Europe Gravel Rider, USA Premium — wants the same thing: torque sensor + mid-drive + integrated battery + sub-17kg.</div></div>
+    <div class="ib-item"><div class="ib-num">2</div><div class="ib-text"><strong>Urban is saturating.</strong> Gravel, Cargo, and B2B are the three growth engines across all geographies. Urban was the entry market; the next decade belongs to adventure + last-mile.</div></div>
+    <div class="ib-item"><div class="ib-num">3</div><div class="ib-text"><strong>Women are the underserved growth segment everywhere.</strong> India 75% male-dominated. Europe women buyers 30%→42% (2019–2024). The brand that builds FOR women wins the next decade.</div></div>
+    <div class="ib-item"><div class="ib-num">4</div><div class="ib-text"><strong>Service proximity is a purchase barrier everywhere.</strong> "What happens if it breaks?" is top-3 concern in all markets. 48-hour home pick-up + city service centers = a moat, not a cost center.</div></div>
+    <div class="ib-item"><div class="ib-num">5</div><div class="ib-text"><strong>India is Europe 10–15 years ago.</strong> Every European trend — gravel growth, B2B fleet, integrated batteries, leasing — will hit India. The playbook exists. Execute it first in India.</div></div>
+    <div class="ib-item"><div class="ib-num">6</div><div class="ib-text"><strong>EU China tariffs = India's moment.</strong> 17.4–35.4% additional tariffs on Chinese e-bikes active from Oct 2024. India-assembled = tariff-free EU access. Cost advantage + trade policy advantage.</div></div>
+  </div>
+</div>
+
+<div class="footer">
+  e-motorad NPD Knowledge Base · Session 1 · May 2026 · Sources: CONEBI, Mordor Intelligence, IMARC, PEW Research, company filings · Brand share figures are directional estimates only
+</div>
+
+</div>
+</body>
+</html>
